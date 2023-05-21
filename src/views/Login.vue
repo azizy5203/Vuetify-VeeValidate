@@ -32,7 +32,7 @@ function onSubmit(values) {
     :validation-schema="schema"
     @submit="onSubmit"
   >
-    <h1 class="text-purple">Login</h1>
+    <h1 class="text-purple">Logins</h1>
     <div class="d-flex flex-column login-form__email-wrapper">
       <label class="text-purple" for="email">Email</label>
       <Field id="email" name="email" v-slot="{ meta, field }">
