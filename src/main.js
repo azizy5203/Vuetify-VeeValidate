@@ -7,6 +7,7 @@
 import 'vue3-toastify/dist/index.css';
 import { toast } from "vue3-toastify";
 
+import './index.css'
 // Components
 import App from './App.vue'
 // Composables

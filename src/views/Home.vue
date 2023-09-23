@@ -1,5 +1,6 @@
 <script setup>
 import Table from "@/components/Table.vue";
+import Phone from "@/components/inputs/Phone.vue";
 import { ref } from "vue";
 
 const checked = "@/assets/logo.png";
@@ -15,6 +16,22 @@ function toggleCheck() {
 <template>
   <v-container class="fill-height">
     <v-responsive class="fill-height">
+      <!-- <v-input name="name" class="d-flex flex-row bg-amber align-center">
+        <template #prepend>
+          <v-select
+          class=""
+            variant="plain"
+            :items="[
+              { title: '+20', value: 'eg' },
+              { title: '+20', value: 'eg' },
+            ]"
+          ></v-select>
+        </template>
+        <template #default>
+          <v-text-field class="" label="name" variant="underlined"></v-text-field>
+        </template>
+      </v-input> -->
+      <Phone/>
       <h1>Home</h1>
       <Table class="table">
         <thead>
@@ -23,7 +40,7 @@ function toggleCheck() {
           </tr>
         </thead>
         <tbody>
-          <tr v-for="(n,index) in 5" :key="`trow-${index}`">
+          <tr v-for="(n, index) in 5" :key="`trow-${index}`">
             <td :key="`check-${index}`">
               <input
                 @click="toggleCheck"

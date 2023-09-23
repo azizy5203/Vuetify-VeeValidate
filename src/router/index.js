@@ -52,6 +52,16 @@ const routes = [
       requiresAuth:false,
     }
   },
+  {
+    path: '/animate',
+    name: 'Animate',
+    component: () => import('@/views/Animate.vue'),
+  },
+  {
+    path: '/risk',
+    name: 'Risk',
+    component: () => import('@/views/Risks/RiskMatrix.vue'),
+  },
 ]
 
 
