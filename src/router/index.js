@@ -62,6 +62,11 @@ const routes = [
     name: 'Risk',
     component: () => import('@/views/Risks/RiskMatrix.vue'),
   },
+  {
+    path: '/collapse',
+    name: 'Collapse',
+    component: () => import('@/views/Collapse/CollapseContainer.vue'),
+  },
 ]
 
 

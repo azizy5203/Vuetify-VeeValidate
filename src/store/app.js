@@ -18,5 +18,11 @@ export const useAppStore = defineStore("app", () => {
     return loggedIn;
   }
 
-  return { email, password, getCredentials, login };
+  function logout(){
+    localStorage.clear()
+    email.value = null
+    password.value = null
+  }
+
+  return { email, password, getCredentials,login,logout };
 });

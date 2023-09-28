@@ -555,7 +555,7 @@ const rates = [
 <template>
   <div class="wrapper">
     <div class="wrapper__labels">
-      <div class="wrapper__impact label">Imapct</div>
+      <div class="wrapper__impact label"><br> <br> <br></div>
       <div class="wrapper__prob label"><span>Probability</span></div>
       <div class="wrapper__very-high label">very-high</div>
       <div class="wrapper__high label">high</div>
@@ -565,6 +565,7 @@ const rates = [
     </div>
     <div class="" style="gap:.5rem">
 
+      <div class="label" style="margin-bottom: .5rem;">Imapct</div>
       <div class="wrapper__impact-label-wrapper">
         <div class="wrapper__matrix-cell">very-low</div>
         <div class="wrapper__matrix-cell">low</div>
@@ -578,25 +579,53 @@ const rates = [
       </div>
     </div>
   </div>
+
+  <div class="bg-amber">
+    <v-tooltip location="top" >
+      <template v-slot:activator="{ props }">
+        <v-img
+          class="cell-wrapper__icon"
+          v-bind="props"
+          src="../../assets/logo.svg"
+          alt=""
+          width="25px"
+          height="25"
+        />
+      </template>
+      <div class="cell-wrapper__tooltip-content-container">
+        <ul>
+          <li>asdas</li>
+          <li>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </li>
+        </ul>
+      </div>
+    </v-tooltip>
+  </div>
 </template>
 
 <style lang="scss" scoped>
 
 .wrapper {
-  margin: 5rem auto;
   background-color: #e9e9e9;
   max-width: 75%;
   display: grid;
   grid-template-columns: 30% auto;
   gap: 8px;
-  padding: 1rem;
+  padding: 2rem;
 
   &__labels {
     // max-width: 50%;
     display: grid;
     gap: 8px;
-    grid-template: repeat(6, auto) / 12% auto;
+    grid-template: repeat(11, auto) / 12% auto;
     grid-template-areas:
+      "impact impact"
+      "impact impact"
+      "impact impact"
+      "impact impact"
+      "impact impact"
       "impact impact"
       "prob vHigh"
       "prob high"
@@ -607,6 +636,7 @@ const rates = [
 
   &__impact {
     grid-area: impact;
+    color: transparent;
   }
   &__prob {
     grid-area: prob;
