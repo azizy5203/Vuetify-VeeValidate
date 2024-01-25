@@ -23,7 +23,7 @@
     "yup": "^1.1.1"
   },
   "devDependencies": {
-    "@vitejs/plugin-vue": "^3.0.3",
+    "@vitejs/plugin-vue": "^3.2.3",
     "vite": "^4.3.7",
     "vite-plugin-vuetify": "^1.0.0"
   }
