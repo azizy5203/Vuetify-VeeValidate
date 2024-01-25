@@ -3,8 +3,8 @@ import { defineStore } from "pinia";
 import { computed, ref } from "vue";
 export const useAppStore = defineStore("app", () => {
   const database = {
-    email: "admin@mail.com",
-    password: "Password12@",
+    email: "admin@admin.com",
+    password: "123456",
   };
   const email = ref(localStorage.getItem("username") || "");
   const password = ref(localStorage.getItem("password") || "");
