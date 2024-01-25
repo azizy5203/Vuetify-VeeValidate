@@ -1,4 +1,5 @@
 <script setup>
+import { ref } from "vue";
 import TableList from "../../components/shared/TableList";
 
 </script>
@@ -16,11 +17,11 @@ import TableList from "../../components/shared/TableList";
       <tbody style="background-color: #00000000;">
         <tr>
           <td>
-            <v-expansion-panels v-model="model"  multiple class="expand" variant="accordion">
-              <v-expansion-panel v-for="n in 4" :value="'panel' + n" class="expand__panel" elevation="0" :ripple="false">
+            <v-expansion-panels multiple class="expand" variant="">
+              <v-expansion-panel v-for="n in 4" class="expand__panel" elevation="0" :ripple="false">
                 <v-expansion-panel-title class="expand__title" hide-actions :static="true" :ripple="false">
                   <v-row no-gutters>
-                    <v-col v-for="n in 15">long text header</v-col>
+                    <v-col v-for="n in 15">long text header long text header long text header </v-col>
                   </v-row>
                 </v-expansion-panel-title>
                 <v-expansion-panel-text>
@@ -37,6 +38,7 @@ import TableList from "../../components/shared/TableList";
   </div>
 </template>
 <style lang="scss" scoped>
+$expand-color:#16707a;
 .expand {
   &:hover {
     // background-color: transparent;
@@ -52,6 +54,14 @@ import TableList from "../../components/shared/TableList";
 
   &__panel {
     background-color: transparent;
+    border: 1px solid transparent;
+    border-radius: 16px;
+
+
+    &.v-expansion-panel--active {
+      border: 1px solid $expand-color;
+
+    }
 
     :hover {
       // background-color: transparent;
@@ -59,6 +69,13 @@ import TableList from "../../components/shared/TableList";
   }
 
   &__title {
+
+    &.v-expansion-panel-title--active {
+      background-color: $expand-color;
+      color: white;
+      border-radius: 16px 16px 0 0;
+
+    }
 
     // background-color: red;
     :hover {
@@ -109,7 +126,7 @@ table {
   .v-col {
     font-size: 12px;
     font-weight: 600;
-    color: rgba(70, 78, 95, 0.8);
+    // color: rgba(70, 78, 95, 0.8);
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
@@ -136,4 +153,5 @@ table {
 
     }
   }
-}</style>
+}
+</style>
