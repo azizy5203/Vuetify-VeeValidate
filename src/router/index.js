@@ -9,19 +9,19 @@ const routes = [
       {
         path: '',
         name: 'Home',
-        // route level code-splitting
-        // this generates a separate chunk (about.[hash].js) for this route
-        // which is lazy-loaded when the route is visited.
         component: () => import(/* webpackChunkName: "home" */ '@/views/Home.vue'),
       },
       {
         path: '/try',
         name: 'Try',
-        // route level code-splitting
-        // this generates a separate chunk (about.[hash].js) for this route
-        // which is lazy-loaded when the route is visited.
         component: () => import('@/views/Try.vue'),
       },
+      {
+        path: '/expand',
+        name: 'Expand',
+        component: () => import('@/views/Expand/Expand.vue'),
+      },
+      
     ],
     meta:{
       requiresAuth:true,
@@ -66,6 +66,12 @@ const routes = [
     path: '/collapse',
     name: 'Collapse',
     component: () => import('@/views/Collapse/CollapseContainer.vue'),
+  },
+
+  {
+    path: '/expansion',
+    name: 'ExpansionPanels',
+    component: () => import('@/views/Expand/ExpansionPanels.vue'),
   },
 ]
 
