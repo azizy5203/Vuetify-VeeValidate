@@ -102,7 +102,7 @@ const links = ["Home", "About Us", "Team", "Services", "Blog", "Contact Us"];
     </template>
   </v-app-bar>
 
-  <v-main>
+  <v-main style="background-color: #e9e9e9">
     <router-view />
     <v-footer color="blue">
       <v-row justify="center" no-gutters>
