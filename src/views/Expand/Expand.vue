@@ -1,27 +1,35 @@
 <script setup>
-import { ref } from "vue";
 import TableList from "../../components/shared/TableList";
-
 </script>
-
-
 
 <template>
   <div class="pa-5 h-100">
     <table-list>
-      <thead>
+      <!-- <thead>
         <v-row no-gutters tag="tr">
           <v-col v-for="n in 15" tag="th">long text header</v-col>
         </v-row>
-      </thead>
-      <tbody style="background-color: #00000000;">
+      </thead> -->
+      <tbody style="background-color: #00000000">
         <tr>
           <td>
             <v-expansion-panels multiple class="expand" variant="">
-              <v-expansion-panel v-for="n in 4" class="expand__panel" elevation="0" :ripple="false">
-                <v-expansion-panel-title class="expand__title" hide-actions :static="true" :ripple="false">
+              <v-expansion-panel
+                v-for="n in 4"
+                class="expand__panel"
+                elevation="0"
+                :ripple="false"
+              >
+                <v-expansion-panel-title
+                  class="expand__title"
+                  hide-actions
+                  :static="true"
+                  :ripple="false"
+                >
                   <v-row no-gutters>
-                    <v-col v-for="n in 15">long text header long text header long text header </v-col>
+                    <v-col v-for="n in 15"
+                      >long text header long text header long text header
+                    </v-col>
                   </v-row>
                 </v-expansion-panel-title>
                 <v-expansion-panel-text>
@@ -38,14 +46,13 @@ import TableList from "../../components/shared/TableList";
   </div>
 </template>
 <style lang="scss" scoped>
-$expand-color:#16707a;
+$expand-color: #16707a;
 .expand {
   &:hover {
     // background-color: transparent;
   }
 
   .v-expansion-panel-title__overlay {
-
     // background-color: green;
     :hover {
       // background-color: transparent;
@@ -57,10 +64,8 @@ $expand-color:#16707a;
     border: 1px solid transparent;
     border-radius: 16px;
 
-
     &.v-expansion-panel--active {
       border: 1px solid $expand-color;
-
     }
 
     :hover {
@@ -69,12 +74,10 @@ $expand-color:#16707a;
   }
 
   &__title {
-
     &.v-expansion-panel-title--active {
       background-color: $expand-color;
       color: white;
       border-radius: 16px 16px 0 0;
-
     }
 
     // background-color: red;
@@ -93,25 +96,23 @@ $expand-color:#16707a;
 
     .v-col {
       padding: 1rem 0;
-
     }
   }
 }
 
 table {
-
-  td {}
+  td {
+  }
 
   tbody {
     tr {
-      td {}
+      td {
+      }
     }
   }
 }
 
-
 .table-list {
-
   thead tr th:first-child {
     min-width: unset;
     width: unset;
@@ -133,7 +134,6 @@ table {
   }
 
   tbody {
-
     tr {
       &:hover {
         background-color: transparent;
@@ -146,11 +146,8 @@ table {
 
         &:first-child {
           padding: 0;
-
         }
-
       }
-
     }
   }
 }
