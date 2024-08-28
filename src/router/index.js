@@ -27,6 +27,11 @@ const routes = [
         name: "ExpansionPanels",
         component: () => import("@/views/Expand/ExpansionPanels.vue"),
       },
+      {
+        path: "/scroll-animations",
+        name: "ScrollAnimations",
+        component: () => import("@/views/ScrollAnimations.vue"),
+      },
     ],
     meta: {
       requiresAuth: true,
@@ -72,6 +77,11 @@ const routes = [
     path: "/collapse",
     name: "Collapse",
     component: () => import("@/views/Collapse/CollapseContainer.vue"),
+  },
+  {
+    path: "/scroll-animations-header",
+    name: "ScrollAnimationsHeader",
+    component: () => import("@/views/ScrollAnimationsHeader.vue"),
   },
 ];
 

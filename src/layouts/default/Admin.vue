@@ -33,6 +33,7 @@ const links = ["Home", "About Us", "Team", "Services", "Blog", "Contact Us"];
       color="white"
       variant="tonal"
       active-color="blue"
+      active-class="active-nav"
       density="comfortable"
     >
       <v-list-item
@@ -60,6 +61,18 @@ const links = ["Home", "About Us", "Team", "Services", "Blog", "Contact Us"];
         to="/expansion"
         prepend-icon="mdi-arrow-expand-vertical"
       />
+      <v-list-item
+        title="Scroll Driven Animations"
+        value="sda"
+        to="/scroll-animations"
+        prepend-icon="mdi-arrow-expand-vertical"
+      />
+      <v-list-item
+        title="Scroll Driven Header Animations"
+        value="sda-header"
+        to="/scroll-animations-header"
+        prepend-icon="mdi-arrow-expand-vertical"
+      />
       <v-list-group value="Actions">
         <template #activator="{ props }">
           <v-list-item v-bind="props" title="Actions"></v-list-item>
@@ -84,7 +97,7 @@ const links = ["Home", "About Us", "Team", "Services", "Blog", "Contact Us"];
     </template>
   </v-navigation-drawer>
   <!-- scroll-behavior="collapse elevate fade-image hide" -->
-  <v-app-bar
+  <!-- <v-app-bar
     density="default"
     :extended="false"
     :collapse="false"
@@ -100,11 +113,11 @@ const links = ["Home", "About Us", "Team", "Services", "Blog", "Contact Us"];
         @click="drawer = !drawer"
       ></v-app-bar-nav-icon>
     </template>
-  </v-app-bar>
+  </v-app-bar> -->
 
   <v-main style="background-color: #e9e9e9">
     <router-view />
-    <v-footer color="blue">
+    <!-- <v-footer color="blue">
       <v-row justify="center" no-gutters>
         <v-btn
           v-for="link in links"
@@ -120,6 +133,12 @@ const links = ["Home", "About Us", "Team", "Services", "Blog", "Contact Us"];
           {{ new Date().getFullYear() }} — <strong>Vuetify</strong>
         </v-col>
       </v-row>
-    </v-footer>
+    </v-footer> -->
   </v-main>
 </template>
+
+<style>
+.active-nav {
+  color: dodgerblue !important;
+}
+</style>
